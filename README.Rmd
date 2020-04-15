@@ -4,10 +4,7 @@ output: github_document
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE,
-  out.width = "75%",
-  dpi = 300
-)
+comment = NA, fig.width=7, fig.height=5, cache = FALSE)
 ```
 
 # ggorbisant
@@ -19,29 +16,27 @@ Colour palettes and plotting themes for Orbisant Analytics website
 You can install `ggorbisant` from GitHub by running the following:
 
 ```{r eval = FALSE}
-# install.packages("remotes")
-remotes::install_github("hendersontrent/ggorbisant")
+devtools::install_github("hendersontrent/ggorbisant")
 ```
 
 ## Theme Orbisant
 
 The theme works by adding the function call to the end of your `ggplot2` code:
 
-```{r echo = TRUE, results = 'hide'}
+```{r message = FALSE}
 library(ggplot2)
 library(ggorbisant)
 
 ggplot(mpg, aes(x = cyl, y = cty)) +
   geom_point(size = 3) +
-  labs("Cylinders vs city miles per gallon") +
+  labs(title = "Cylinders vs city miles per gallon") +
   theme_orbisant()
 ```
 
 The colour palette built into the package is presented below:
 
-```{r}
+```{r message = FALSE}
 library(scales)
-library(ggorbisant)
 
 scales::show_col(ggorbisant:::orbisant_palette)
 ```
@@ -51,9 +46,6 @@ scales::show_col(ggorbisant:::orbisant_palette)
 Use `scale_colour_orbisant()` to apply the theme for colour parameters.
 
 ```{r}
-library(ggplot2)
-library(ggorbisant)
-
 ggplot(mpg, aes(x = cyl, y = cty, colour = drv)) +
 geom_point(size = 3) +
 labs(title = "Cylinders vs city miles per gallon by drivetrain") +
@@ -64,10 +56,8 @@ theme_orbisant()
 And `scale_fill_orbisant()` to apply the theme for fill parameters.
 
 ```{r}
-library(ggplot2)
 library(dplyr)
 library(magrittr)
-library(ggorbisant)
 
 mpg %>%
 group_by(drv) %>%
