@@ -2,16 +2,10 @@
 % Please edit documentation in R/orbisant.R
 \name{theme_orbisant}
 \alias{theme_orbisant}
-\title{Styles plots according to Orbisant's theme}
+\title{Style general plot features according to the Orbisant theme}
 \usage{
 theme_orbisant()
 }
 \description{
 Uses the colours outlined here plus some 2 others https://www.canva.com/colors/color-palettes/floaty-pool-fun/
-}
-\examples{
-library(ggplot2)
-ggplot(university_enrolments, aes(x = domestic, y = international)) +
- geom_point() +
- theme_orbisant()
 }

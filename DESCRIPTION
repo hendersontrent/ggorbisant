@@ -2,7 +2,8 @@ Package: ggorbisant
 Type: Package
 Title: Orbisant Analytics theme for ggplot2
 Version: 0.1.0
-Author: Trent Henderson
+Authors@R: c(
+    person("Trent", "Henderson", email = "trent.henderson1@outlook.com", role = c("aut", "cre")))
 Maintainer: The package maintainer <trent.henderson1@outlook.com>
 Description: Orbisant Analytics theme for ggplot2
 License: MIT

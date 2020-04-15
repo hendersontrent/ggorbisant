@@ -1,0 +1,80 @@
+---
+output: github_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  out.width = "75%",
+  dpi = 300
+)
+```
+
+# ggorbisant
+
+Colour palettes and plotting themes for Orbisant Analytics website
+
+## Installation
+
+You can install `ggorbisant` from GitHub by running the following:
+
+```{r eval = FALSE}
+# install.packages("remotes")
+remotes::install_github("hendersontrent/ggorbisant")
+```
+
+## Theme Orbisant
+
+The theme works by adding the function call to the end of your `ggplot2` code:
+
+```{r echo = TRUE, results = 'hide'}
+library(ggplot2)
+library(ggorbisant)
+
+ggplot(university_enrolments, aes(x = domestic, y = international)) +
+  geom_point() +
+  theme_orbisant()
+```
+
+The colour palette built into the package is presented below:
+
+```{r}
+library(scales)
+library(ggorbisant)
+
+scales::show_col(ggorbisant:::orbisant_palette)
+```
+
+## This palette can be used for colouring (and filling) plots
+
+Use `scale_colour_orbisant()` to apply the theme for colour parameters.
+
+```{r}
+library(ggplot2)
+ggplot(university_enrolments, aes(x = domestic, y = international, colour = state)) +
+geom_point() +
+labs(title = "Go8 domestic vs international enrolments") +
+scale_colour_orbisant() +
+theme_orbisant()
+```
+
+And `scale_fill_orbisant()` to apply the theme for fill parameters.
+
+```{r}
+library(ggplot2)
+ggplot(university_enrolments, aes(x = domestic, colour = state)) +
+geom_col() +
+labs(title = "Go8 domestic enrolments") +
+scale_fill_orbisant() +
+theme_orbisant()
+```
+
+## Data
+
+`ggorbisant` comes with one in-built data set, which is domestic and international student enrolments for the Group of Eight (Go8) research-intensive universities in Australia.
+
+```{r}
+library(ggorbisant)
+
+university_enrolments
+```
