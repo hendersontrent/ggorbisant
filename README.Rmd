@@ -4,7 +4,7 @@ output: github_document
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
-comment = NA, fig.width=7, fig.height=5, cache = FALSE)
+comment = NA, fig.width = 7, fig.height = 5, cache = FALSE)
 ```
 
 # ggorbisant
