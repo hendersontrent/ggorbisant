@@ -23,7 +23,7 @@ library(ggorbisant)
 ggplot(mpg, aes(x = cyl, y = cty)) +
   geom_point(size = 3) +
   labs(title = "Cylinders vs city miles per gallon") +
-  theme_orbisant()
+  theme_orbisant(grids = TRUE)
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
@@ -47,7 +47,7 @@ ggplot(mpg, aes(x = cyl, y = cty, colour = drv)) +
 geom_point(size = 3) +
 labs(title = "Cylinders vs city miles per gallon by drivetrain") +
 scale_colour_orbisant() +
-theme_orbisant()
+theme_orbisant(grids = TRUE)
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
