@@ -30,7 +30,7 @@ library(ggorbisant)
 ggplot(mpg, aes(x = cyl, y = cty)) +
   geom_point(size = 3) +
   labs(title = "Cylinders vs city miles per gallon") +
-  theme_orbisant()
+  theme_orbisant(grids = TRUE)
 ```
 
 The colour palette built into the package is presented below:
@@ -50,7 +50,7 @@ ggplot(mpg, aes(x = cyl, y = cty, colour = drv)) +
 geom_point(size = 3) +
 labs(title = "Cylinders vs city miles per gallon by drivetrain") +
 scale_colour_orbisant() +
-theme_orbisant()
+theme_orbisant(grids = TRUE)
 ```
 
 And `scale_fill_orbisant()` to apply the theme for fill parameters.

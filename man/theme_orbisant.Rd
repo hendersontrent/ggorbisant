@@ -4,7 +4,7 @@
 \alias{theme_orbisant}
 \title{Style general plot features according to the Orbisant theme}
 \usage{
-theme_orbisant()
+theme_orbisant(grids = FALSE)
 }
 \description{
 Style general plot features according to the Orbisant theme
