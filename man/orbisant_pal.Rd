@@ -4,14 +4,14 @@
 \alias{orbisant_pal}
 \alias{scale_colour_orbisant}
 \alias{scale_color_orbisant}
-\alias{scale_fill_orbsisant}
+\alias{scale_fill_orbisant}
 \title{Orbisant Colour and Fill Scales}
 \usage{
 scale_colour_orbisant(...)
 
 scale_color_orbisant(...)
 
-scale_fill_orbsisant(...)
+scale_fill_orbisant(...)
 }
 \arguments{
 \item{...}{

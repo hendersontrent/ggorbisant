@@ -38,7 +38,7 @@ scale_color_orbisant <- scale_colour_orbisant
 
 #' @rdname orbisant_pal
 #' @export
-scale_fill_orbsisant <- function(...) {
+scale_fill_orbisant <- function(...) {
   ggplot2::discrete_scale('fill', 'orbisant', orbisant_pal(), ...)
 }
 
