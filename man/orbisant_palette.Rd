@@ -3,7 +3,8 @@
 \docType{data}
 \name{orbisant_palette}
 \alias{orbisant_palette}
-\title{General colour palette imports as hex codes}
+\title{General colour palette imports as hex codes
+Uses the colours outlined here plus some others that are graphically related https://www.canva.com/colors/color-palettes/floaty-pool-fun/}
 \format{
 An object of class \code{character} of length 6.
 }
@@ -12,5 +13,6 @@ orbisant_palette
 }
 \description{
 General colour palette imports as hex codes
+Uses the colours outlined here plus some others that are graphically related https://www.canva.com/colors/color-palettes/floaty-pool-fun/
 }
 \keyword{datasets}

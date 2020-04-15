@@ -42,7 +42,7 @@ The colour palette built into the package is presented below:
 library(scales)
 library(ggorbisant)
 
-scales::show_col(ggorbisant:::orbisant_palette)
+scales::show_col(ggorbisant:::orbisant_pal)
 ```
 
 ## This palette can be used for colouring (and filling) plots

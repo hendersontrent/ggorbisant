@@ -7,5 +7,5 @@
 theme_orbisant()
 }
 \description{
-Uses the colours outlined here plus some 2 others https://www.canva.com/colors/color-palettes/floaty-pool-fun/
+Style general plot features according to the Orbisant theme
 }

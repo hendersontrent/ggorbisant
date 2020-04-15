@@ -1,4 +1,5 @@
 #' General colour palette imports as hex codes
+#' Uses the colours outlined here plus some others that are graphically related https://www.canva.com/colors/color-palettes/floaty-pool-fun/
 
 orbisant_palette <- c(
   "#25388E",
@@ -43,8 +44,6 @@ scale_fill_orbsisant <- function(...) {
 
 #' Style general plot features according to the Orbisant theme
 #'
-#' Uses the colours outlined here plus some 2 others https://www.canva.com/colors/color-palettes/floaty-pool-fun/
-#' 
 #' @rdname theme_orbisant
 #' @export
 
