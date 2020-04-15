@@ -1,11 +1,3 @@
----
-output: github_document
----
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-comment = NA, fig.width = 6, fig.height = 4, cache = FALSE)
-```
 
 # ggorbisant
 
@@ -15,15 +7,16 @@ Colour palettes and plotting themes for Orbisant Analytics website
 
 You can install `ggorbisant` from GitHub by running the following:
 
-```{r eval = FALSE}
+``` r
 devtools::install_github("hendersontrent/ggorbisant")
 ```
 
 ## Theme Orbisant
 
-The theme works by adding the function call to the end of your `ggplot2` code:
+The theme works by adding the function call to the end of your `ggplot2`
+code:
 
-```{r message = FALSE}
+``` r
 library(ggplot2)
 library(ggorbisant)
 
@@ -33,19 +26,23 @@ ggplot(mpg, aes(x = cyl, y = cty)) +
   theme_orbisant()
 ```
 
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+
 The colour palette built into the package is presented below:
 
-```{r message = FALSE}
+``` r
 library(scales)
 
 scales::show_col(ggorbisant:::orbisant_palette)
 ```
 
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
 ## This palette can be used for colouring (and filling) plots
 
 Use `scale_colour_orbisant()` to apply the theme for colour parameters.
 
-```{r}
+``` r
 ggplot(mpg, aes(x = cyl, y = cty, colour = drv)) +
 geom_point(size = 3) +
 labs(title = "Cylinders vs city miles per gallon by drivetrain") +
@@ -53,9 +50,11 @@ scale_colour_orbisant() +
 theme_orbisant()
 ```
 
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+
 And `scale_fill_orbisant()` to apply the theme for fill parameters.
 
-```{r message = FALSE}
+``` r
 library(dplyr)
 library(magrittr)
 
@@ -69,3 +68,5 @@ labs(title = "Average City miles per gallon by drivetrain") +
 scale_fill_orbisant() +
 theme_orbisant()
 ```
+
+![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
