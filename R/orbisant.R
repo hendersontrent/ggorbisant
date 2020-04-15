@@ -9,14 +9,13 @@
 #' 
 #' @examples
 #' library(ggplot2)
-#' ggplot(df, aes(x = x, y = x)) +
+#' ggplot(university_enrolments, aes(x = domestic, y = international)) +
 #'  geom_point() +
 #'  theme_orbisant()
 
 theme_orbisant <- function(){
   theme_bw() +  
-  theme(legend.position = "bottom",
-          axis.text = element_text(colour = orbisant_col("dark_blue")),
+  theme(axis.text = element_text(colour = orbisant_col("dark_blue")),
           axis.title = element_text(colour = orbisant_col("dark_blue"), face = "bold"),
           panel.border = element_blank(),
           panel.grid.minor = element_blank(),
@@ -45,7 +44,7 @@ theme_orbisant <- function(){
 #' 
 #' @examples
 #' library(ggplot2)
-#' ggplot(df, aes(x = x, y = x, colour = category)) +
+#' ggplot(university_enrolments, aes(x = domestic, y = international, colour = state)) +
 #'  geom_point() +
 #'  scale_colour_orbisant() +
 #'  theme_orbisant()
